@@ -3,7 +3,7 @@
 *_islower - checks for lowercase character.
 *@c: function paremeter.
 *
-*Return: 1 or 0.
+*Return: 1 or 0
 */
 int _islower(int c)
 {

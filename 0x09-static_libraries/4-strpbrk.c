@@ -1,24 +1,32 @@
 #include "main.h"
+#define NULL 0
 
 /**
- * _isalpha - Return 1 if c is a letter. lowercase or uppercase
- *
- * @c: The int to print
- * Return: Always 0.
- */
+* _strpbrk - return pointer to byte in s that matches a byte in accept
+* @s: string to search
+* @accept: target matches
+* Return: pointer to index of string at first occurence
+*/
 
-int _isalpha(int c)
-
+char *_strpbrk(char *s, char *accept)
 {
+	int x = 0, y;
 
-	if ((c > 'a' && c < 'z') || (c > 'A' && c < 'Z'))
+	while (s[x] != '\0')
 	{
-		return (1);
+		for (y = 0; accept[y] != '\0'; y++)
+		{
+			if (s[x] == accept[y])
+			{
+				s = &s[x];
+				return (s);
+			}
+
+		}
+
+	x++;
 	}
 
-	else
-	{
-		return (0);
-	}
+	return (NULL);
 
 }
